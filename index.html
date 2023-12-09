@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wag gisingin aba</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
+</head>
+<body>
+  <h1 style="text-align: center;">Tulog Yan Oo</h1>
+  <p style="text-align: center;">Tap mo lang buttons ni Jierhonix</p>
+
+  <!--<button type="button" onclick="
+    document.getElementById('taps').innerHTML = 'Hello Javascript!'
+  ">Tap me</button>-->
+
+  <div class="img-frame">
+    <img id="myImage" src="face1.png">
+  </div>
+
+  <div class="btn">
+    <button onclick="lightOn()">Wake up</button>
+    <button onclick="lightOff()">Sleep</button>
+  </div>
+  
+
+
+
+  <script>
+
+    let x = 1;
+
+    function lightOn() {
+      if (x == 1) {
+        x = x + 1;
+        document.getElementById('myImage').src='face2.png';
+        setTimeout(lightOn1, 30);
+        
+        function lightOn1() {
+          document.getElementById('myImage').src='face3.png';
+        }
+      }
+    }
+
+    function lightOff() {
+      if (x == 2) {
+        x = x - 1;
+        document.getElementById('myImage').src='face2.png';
+        setTimeout(lightOn1, 30);
+
+        function lightOn1() {
+          document.getElementById('myImage').src='face1.png';
+        }
+      }
+    }
+      
+  </script>
+
+</body>
+</html>
